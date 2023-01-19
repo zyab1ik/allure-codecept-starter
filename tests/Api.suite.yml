@@ -1,0 +1,19 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: ApiTester
+modules:
+  enabled:
+    - REST:
+        depends: PhpBrowser
+        url: &url 'https://demoqa.com/Account/v1/User/'
+      config:
+        PhpBrowser:
+          url: *url
+          headers:
+            Content-Type: application/json
+    - Tests\Support\Helper\Api
+  step_decorators: ~

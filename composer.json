@@ -1,0 +1,51 @@
+{
+  "require-dev": {
+    "php": "^8",
+    "allure-framework/allure-codeception": "^2",
+    "codeception/codeception": "5.*",
+    "codeception/codeception-progress-reporter": "~4.0",
+    "codeception/module-asserts": "3.*",
+    "codeception/module-filesystem": "3.*",
+    "codeception/module-phpbrowser": "3.*",
+    "codeception/module-rest": "3.*",
+    "codeception/module-webdriver": "3.2.0",
+    "fakerphp/faker": "^v1.21.0",
+    "nesbot/carbon": "^2.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/",
+      "Tests\\Acceptance\\": "tests/Acceptance/",
+      "Tests\\Unit\\": "tests/Unit/",
+      "Tests\\Api\\": "tests/Api/",
+      "Tests\\Manual\\": "tests/Manual/"
+    }
+  },
+  "scripts": {
+    "build-actor": [
+      "codecept build"
+    ],
+    "codecept": [
+      "codecept"
+    ],
+    "codecept-run": [
+      "codecept run --steps"
+    ],
+    "codecept-clean": [
+      "codecept clean"
+    ],
+    "test-acceptance": [
+      "codecept run Acceptance --steps"
+    ],
+    "test-manual": [
+      "codecept run Manual --steps"
+    ],
+    "test-unit": [
+      "codecept run Unit --steps"
+    ],
+    "test-api": [
+      "codecept run Api --steps"
+    ]
+  }
+}
