@@ -26,13 +26,13 @@ class ManualTester extends Actor
 
     /**
      * @param string $user
-     * @param array $columns
      * @return ManualTester
-     * @throws \Throwable
      */
-    public function amAuthenticatedAs(string $user, array $columns): self
+    public function amAuthenticatedAs(string $user): self
     {
-        return $this->step('I\'m auth as "' . $user . '" with "' . json_encode($columns) . '"');
+        $this->amGoingTo('authentication as ' . $user);
+
+        return $this;
     }
 
     /**
@@ -41,19 +41,21 @@ class ManualTester extends Actor
      */
     public function amAuthenticatedAsGuest(): self
     {
-        return $this->step('Am authenticate as guest');
+        $this->amGoingTo('authentication as guest');
+
+        return $this;
     }
 
     /**
      * @param string $page
-     * @return ManualTester
      * @throws \Throwable
      */
-    public function amOnPage(string $page): ManualTester
+    public function amOnPage(string $page): self
     {
-        return $this->step('Am on page ' . $page);
-    }
+        $this->amGoingTo('open the page: ' . $page);
 
+        return $this;
+    }
     /**
      * Step for allure
      *
@@ -96,17 +98,6 @@ class ManualTester extends Actor
     }
 
     /**
-     * Step 'Expect'
-     *
-     * @throws \Throwable
-     * @return $this
-     */
-    public function expectStep(string $text): self
-    {
-        return $this->step('Expect: ' . $text);
-    }
-
-    /**
      * Step 'Precondition'
      *
      * @throws \Throwable
@@ -118,24 +109,12 @@ class ManualTester extends Actor
     }
 
     /**
-     * Step 'Prepare data'
-     *
-     * @throws \Throwable
-     * @return $this
-     */
-    public function prepareDataStep(string $text): self
-    {
-        return $this->step('Prepare data: ' . $text);
-    }
-
-    /**
      * @param string $locator
      * @return ManualTester
-     * @throws \Throwable
      */
     public function clickOnElement(string $locator): self
     {
-        $this->step("Click on ${locator}");
+        $this->wantTo("Click on ${locator}");
 
         return $this;
     }
@@ -144,11 +123,12 @@ class ManualTester extends Actor
      * @param string $elementName
      * @param string $data
      * @return ManualTester
-     * @throws \Throwable
      */
     public function fill(string $elementName, string $data): self
     {
-        return $this->step('Fill "' . $data . '" to ' . $elementName);
+        $this->wantTo('Fill "' . $data . '" to ' . $elementName);
+
+        return $this;
     }
 
     /**
@@ -157,7 +137,9 @@ class ManualTester extends Actor
      */
     public function clickSubmitButton(): self
     {
-        return $this->step('Click submit button');
+        $this->wantTo('Click submit button');
+
+        return $this;
     }
 
     /**
@@ -166,7 +148,9 @@ class ManualTester extends Actor
      */
     public function reloadPage(): self
     {
-        return $this->step('Reload page');
+        $this->wantTo('Reload page');
+
+        return $this;
     }
 
     /**
@@ -175,6 +159,8 @@ class ManualTester extends Actor
      */
     public function openNewTab(): self
     {
-        return $this->step('Open new tab');
+        $this->wantTo('Open new tab');
+
+        return $this;
     }
 }

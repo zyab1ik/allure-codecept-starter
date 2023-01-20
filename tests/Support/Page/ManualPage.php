@@ -18,7 +18,7 @@ class ManualPage extends Base
      */
     public function clickOnFirstBlogItem(): self
     {
-        $this->tester->step('Click on  ' . json_encode('div[class="blog-list_container"] > div:first-of-type'));
+        $this->tester->expect('Click on  ' . json_encode('div[class="blog-list_container"] > div:first-of-type'));
 
         return $this;
     }

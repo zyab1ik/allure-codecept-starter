@@ -28,12 +28,12 @@ class IndexCest
         $I->openNewTab();
         $I->amOnPage('/blog');
         $I->reloadPage();
-        $I->expectStep('Title in blog page');
-        $I->subStep('Find the first blog item', 'Check title in first blog item');
+        $I->wantToTest('title in first blog item');
+        $I->expectTo('Title in blog page');
 
         $manualPage->clickOnFirstBlogItem();
-        $I->step('Check title of news');
-        $I->expectStep('Title of news is visible');
+        $I->wantToTest('title of news');
+        $I->expectTo('title of news is visible');
     }
 
     /**
@@ -53,6 +53,6 @@ class IndexCest
         $I->amOnPage('/education');
         $I->clickOnElement($example['course']);
 
-        $I->expectStep('The page with course "' . $example['course'] . '" is opened in new tab');
+        $I->expectTo('The page with course "' . $example['course'] . '" is opened in new tab');
     }
 }
