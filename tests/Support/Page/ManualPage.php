@@ -13,6 +13,13 @@ class ManualPage extends Base
      */
 
     /**
+     * Page URL
+     *
+     * @const string
+     */
+    public const URL = '/blog';
+
+    /**
      * @return $this
      * @throws \Throwable
      */

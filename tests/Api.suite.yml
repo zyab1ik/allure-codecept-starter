@@ -9,7 +9,7 @@ modules:
   enabled:
     - REST:
         depends: PhpBrowser
-        url: &url 'https://demoqa.com/Account/v1/User/'
+        url: &url 'https://demoqa.com/Account/v1/User'
       config:
         PhpBrowser:
           url: *url

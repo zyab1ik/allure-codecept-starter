@@ -7,6 +7,7 @@ use Qameta\Allure\Attribute\Description;
 use Qameta\Allure\Attribute\Label;
 use Tests\Support\Helper\AllureLabels;
 use Tests\Support\ManualTester;
+use Tests\Support\Page\Education;
 use Tests\Support\Page\ManualPage;
 
 class IndexCest
@@ -26,7 +27,7 @@ class IndexCest
     {
         $I->preconditionStep('Create several blogs with different news');
         $I->openNewTab();
-        $I->amOnPage('/blog');
+        $I->amOnPage(ManualPage::URL);
         $I->reloadPage();
         $I->wantToTest('title in first blog item');
         $I->expectTo('Title in blog page');
@@ -47,10 +48,10 @@ class IndexCest
     #[Description('Check that all courses is opened in new page')]
     #[Label(AllureLabels::KEY_JIRA, 'SA-0001')]
     #[Label(AllureLabels::KEY_LAYER, AllureLabels::MANUAL_LAYER)]
-    public function testOpenedCourseInNewPage(ManualTester $I, Example $example): void
+    public function testOpeningNewCourseInNewTab(ManualTester $I, Example $example): void
     {
         $I->amAuthenticatedAsGuest();
-        $I->amOnPage('/education');
+        $I->amOnPage(Education::URL);
         $I->clickOnElement($example['course']);
 
         $I->expectTo('The page with course "' . $example['course'] . '" is opened in new tab');

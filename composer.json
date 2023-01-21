@@ -3,7 +3,7 @@
     "php": "^8",
     "allure-framework/allure-codeception": "^2",
     "codeception/codeception": "5.*",
-    "codeception/codeception-progress-reporter": "~4.0",
+    "codeception/codeception-progress-reporter": "4.0.5",
     "codeception/module-asserts": "3.*",
     "codeception/module-filesystem": "3.*",
     "codeception/module-phpbrowser": "3.*",
@@ -30,7 +30,7 @@
       "codecept"
     ],
     "codecept-run": [
-      "codecept run --steps"
+      "codecept run"
     ],
     "codecept-clean": [
       "codecept clean"

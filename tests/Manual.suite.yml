@@ -8,7 +8,7 @@ actor: ManualTester
 modules:
   enabled:
     - PhpBrowser:
-        url: https://qameta.io/
+        url: https://qameta.io
     - REST:
         depends: PhpBrowser
         part: Json
