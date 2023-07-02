@@ -40,16 +40,16 @@
       "codecept clean"
     ],
     "test-acceptance": [
-      "codecept run Acceptance --steps"
+      "codecept run Acceptance --steps --html"
     ],
     "test-manual": [
-      "codecept run Manual --steps"
+      "codecept run Manual --steps --html"
     ],
     "test-unit": [
-      "codecept run Unit --steps"
+      "codecept run Unit --steps --html"
     ],
     "test-api": [
-      "codecept run Api --steps"
+      "codecept run Api --steps --html"
     ]
   }
 }

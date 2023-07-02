@@ -24,7 +24,6 @@ jobs:
           - macOS-latest
         composer-options:
           - ""
-          - "--prefer-lowest"
     steps:
       - name: Checkout
         uses: actions/checkout@v3.5.3
