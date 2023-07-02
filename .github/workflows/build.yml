@@ -27,7 +27,7 @@ jobs:
           - "--prefer-lowest"
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.3
 
       - name: Validate composer.json and composer.lock
         run: composer validate
@@ -45,12 +45,9 @@ jobs:
           --prefer-dist
           --no-progress
           ${{ matrix.composer-options }}
+
       - name: setup-chromedriver
-      - uses: actions/checkout@v2
-      - uses: nanasess/setup-chromedriver@v2.0.0
-        with:
-          # Optional: do not specify to match Chrome's version
-          chromedriver-version: '114.0.5735.90'
+        uses: nanasess/setup-chromedriver@v2.0.0
       - run: |
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
