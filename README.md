@@ -1,4 +1,4 @@
-# Describe
+# Description
 This is a simple project to show how to use the [Allure codeception](https://github.com/allure-framework/allure-php-commons2/releases/tag/v2.2.0) extension with [Codeception 5](https://codeception.com/07-28-2022/codeception-5.html)
 
 # How to use
