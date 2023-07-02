@@ -17,7 +17,8 @@ This is a simple project to show how to use the [Allure codeception](https://git
 
 ##### Report:
 Report will be generated in the `tests/_output` directory. 
-You can download the report from the `tests/_output` directory and open it in your allure report instance.
+You can download the report from the `tests/_output` directory and open it in your allure report instance. Example,
+[free version of allure](https://zyab1ik.github.io/codeception-allure-integration)
 
 The report should look like this (one of the test case is failed):
 ![Report with all cases](docs/images/Screenshot%202023-01-19%20at%205.01.14%20PM.png)
