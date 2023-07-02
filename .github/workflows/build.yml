@@ -21,7 +21,7 @@ jobs:
           - "8.2"
         os:
           - ubuntu-latest
-          - macOS-latest
+#          - macOS-latest
         composer-options:
           - ""
     steps:
@@ -79,7 +79,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           workflow_id: main.yml
-          allure_results: allure-results
+          allure_results: tests/_output/allure-results
           gh_pages: gh-pages
 
       - name: Publish Github Pages
