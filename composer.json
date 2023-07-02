@@ -1,4 +1,8 @@
 {
+  "name": "zyab1ik/codeception-allure-integration",
+  "keywords":["codeception", "testing", "report", "steps", "cases", "allure"],
+  "description": "Allure Codeception integration",
+  "license": "Apache-2.0",
   "require-dev": {
     "php": "^8",
     "allure-framework/allure-codeception": "^2",
