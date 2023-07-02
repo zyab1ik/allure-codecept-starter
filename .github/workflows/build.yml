@@ -45,9 +45,8 @@ jobs:
           --prefer-dist
           --no-progress
           ${{ matrix.composer-options }}
-
-      - uses: actions/checkout@v2
       - name: setup-chromedriver
+      - uses: actions/checkout@v2
       - uses: nanasess/setup-chromedriver@v2.0.0
         with:
           # Optional: do not specify to match Chrome's version
