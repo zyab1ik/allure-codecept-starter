@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - 'main'
-      - 'hotfix-*'
+      - 'gh-pages'
 
 jobs:
   tests:
