@@ -40,21 +40,22 @@ jobs:
           coverage: xdebug
           ini-values: error_reporting=E_ALL
 
-      - uses: actions/checkout@v2
-      - uses: nanasess/setup-chromedriver@v2
-        with:
-          # Optional: do not specify to match Chrome's version
-#          chromedriver-version: '88.0.4324.96'
-      - run: |
-          export DISPLAY=:99
-          chromedriver --url-base=/wd/hub &
-          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
-
       - name: Install dependencies
         run: composer update
           --prefer-dist
           --no-progress
           ${{ matrix.composer-options }}
+
+      - uses: actions/checkout@v2
+      - name: setup-chromedriver
+      - uses: nanasess/setup-chromedriver@v2.0.0
+        with:
+          # Optional: do not specify to match Chrome's version
+          chromedriver-version: '114.0.5735.90'
+      - run: |
+          export DISPLAY=:99
+          chromedriver --url-base=/wd/hub &
+          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional  
 
       - name: Run acceptance tests
         run: composer test-acceptance
