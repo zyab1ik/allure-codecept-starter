@@ -5,7 +5,7 @@ This is a simple project to show how to use the [Allure codeception](https://git
 
 #### Preparation:
 1. Install composer and run `composer install` in the root directory of this project.
-2. Download and install Chrome browser & chromeDriver from https://sites.google.com/a/chromium.org/chromedriver/downloads and put it in the root directory of this project.
+2. Download and install [Chrome browser & chromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) and put it in the root directory of this project.
 3. Run chromeDriver with `./chromedriver --url-base=/wd/hub` in the root directory of this project.
 
 #### Run:
@@ -20,10 +20,11 @@ Report will be generated in the `tests/_output` directory.
 You can download the report from the `tests/_output` directory and open it in your allure report instance. Example,
 [free version of allure](https://zyab1ik.github.io/codeception-allure-integration)
 
-The report should look like this (one of the test case is failed):
+The report from **Allure TestOps** should look like this (one of the test case is failed):
 ![Report with all cases](docs/images/Screenshot%202023-01-19%20at%205.01.14%20PM.png)
 
 Also, you can find example of manual test case in the `tests/acceptance/ManualTestCest.php` file. 
+
 It is a simple test cases with a few steps which realised "test case as a code" approach.
 
 Manual tests:
@@ -32,7 +33,7 @@ Manual test case in progress:
 ![Manual tests launch](docs/images/Screenshot%202023-01-19%20at%206.32.45%20PM.png)
 Acceptance tests:
 ![Acceptance tests](docs/images/Screenshot%202023-01-19%20at%205.13.21%20PM.png)
-
 Api tests:
 ![Api tests](docs/images/Screenshot%202023-01-19%20at%205.14.04%20PM.png)
+
 Thanks for reading!
