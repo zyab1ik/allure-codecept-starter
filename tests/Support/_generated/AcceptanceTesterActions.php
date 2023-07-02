@@ -1,4 +1,4 @@
-<?php  //[STAMP] 10fd1bdf7b08abd5d17cc91580ac04d8
+<?php  //[STAMP] b63d9f1cffff8d7ef22c8a2257c77768
 // phpcs:ignoreFile
 namespace Tests\Support\_generated;
 
@@ -1497,6 +1497,7 @@ trait AcceptanceTesterActions
      *
      * Checks that the given element exists on the page and is visible.
      * You can also specify expected attributes of this element.
+     * Only works if `<html>` tag is present.
      *
      * ``` php
      * <?php
@@ -1519,6 +1520,7 @@ trait AcceptanceTesterActions
      * [!] Conditional Assertion: Test won't be stopped on fail
      * Checks that the given element exists on the page and is visible.
      * You can also specify expected attributes of this element.
+     * Only works if `<html>` tag is present.
      *
      * ``` php
      * <?php

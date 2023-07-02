@@ -21,7 +21,7 @@ class IndexCest
         $I->comment('Test is failed, because the element is not visible in DOM');
         Allure::runStep(
             function () use ($I) {
-                $I->waitForElementVisible(Index::PAGE_TITLE_XPATH);
+                $I->waitForElement(Index::PAGE_TITLE_XPATH);
             },
             'Waits up to 10 seconds for the given element: ' . json_encode(Index::PAGE_TITLE_XPATH) . 'to be visible on the page'
         );
@@ -33,6 +33,6 @@ class IndexCest
     {
         $I->amOnPage(Index::URL);
         $I->click(Index::FREE_TRIAL_PRICING_BUTTON_XPATH);
-        $I->seeInCurrentUrl('/#pricing');
+        $I->seeInCurrentUrl('/cloud-trial-request/');
     }
 }

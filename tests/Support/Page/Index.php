@@ -24,7 +24,7 @@ class Index
      *
      * @const string
      */
-    public const PAGE_TITLE_XPATH = '//title[text()="Allure TestOps: Centralized Test Reporting"]';
+    public const PAGE_TITLE_XPATH = '//title[text()="Allure TestOps - Full-stack Test Management"]';
 
     /**
      * "free trial pricing" button xpath selector

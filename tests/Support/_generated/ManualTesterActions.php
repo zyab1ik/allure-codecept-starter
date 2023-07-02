@@ -1,4 +1,4 @@
-<?php  //[STAMP] dd334523a5019f573e526a89afcb1606
+<?php  //[STAMP] 582a995fa469e2f503b6a054aaf23a30
 // phpcs:ignoreFile
 namespace Tests\Support\_generated;
 
@@ -1648,6 +1648,7 @@ trait ManualTesterActions
      *
      * Checks that the given element exists on the page and is visible.
      * You can also specify expected attributes of this element.
+     * Only works if `<html>` tag is present.
      *
      * ``` php
      * <?php
@@ -1670,6 +1671,7 @@ trait ManualTesterActions
      * [!] Conditional Assertion: Test won't be stopped on fail
      * Checks that the given element exists on the page and is visible.
      * You can also specify expected attributes of this element.
+     * Only works if `<html>` tag is present.
      *
      * ``` php
      * <?php
