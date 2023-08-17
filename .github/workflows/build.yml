@@ -46,7 +46,7 @@ jobs:
           ${{ matrix.composer-options }}
 
       - name: setup-chromedriver
-        uses: nanasess/setup-chromedriver@v2.0.0
+        uses: nanasess/setup-chromedriver@v2.2.0
       - run: |
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
