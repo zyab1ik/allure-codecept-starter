@@ -1,0 +1,1 @@
+/home/runner/work/LearnCodeceptionProject/LearnCodeceptionProject/tests/_output/Tests.Acceptance.IndexCest.testPageTitle.fail.html
