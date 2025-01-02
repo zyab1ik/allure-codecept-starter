@@ -1,3 +1,3 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Thu Jan 02 21:40:07 GMT 2025","Thu Jan 02 21:40:07 GMT 2025","1","Tests.Acceptance","","","Tests\Acceptance\IndexCest","testOpenTrialPricingPage","testOpenTrialPricingPage","Check that pricing page is visible after click on get free trial button"
-"broken","Thu Jan 02 21:40:07 GMT 2025","Thu Jan 02 21:40:07 GMT 2025","6","Tests.Acceptance","","","Tests\Acceptance\IndexCest","testPageTitle","testPageTitle","Check title adn url on index page"
+"broken","Thu Jan 02 21:40:29 GMT 2025","Thu Jan 02 21:40:29 GMT 2025","1","Tests.Acceptance","","","Tests\Acceptance\IndexCest","testOpenTrialPricingPage","testOpenTrialPricingPage","Check that pricing page is visible after click on get free trial button"
+"broken","Thu Jan 02 21:40:29 GMT 2025","Thu Jan 02 21:40:29 GMT 2025","5","Tests.Acceptance","","","Tests\Acceptance\IndexCest","testPageTitle","testPageTitle","Check title adn url on index page"
