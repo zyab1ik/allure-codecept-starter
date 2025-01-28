@@ -14,7 +14,7 @@
     "codeception/module-rest": "3.*",
     "codeception/module-webdriver": "3.2.0",
     "fakerphp/faker": "^v1.21.0",
-    "nesbot/carbon": "^2.0",
+    "nesbot/carbon": "^3.8",
     "phpunit/phpunit": "^9.5"
   },
   "autoload-dev": {
