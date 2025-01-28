@@ -1,0 +1,1 @@
+/home/runner/work/allure-codecept-starter/allure-codecept-starter/tests/_output/Tests.Acceptance.IndexCest.testOpenTrialPricingPage.fail.png
